@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AppToturial.MainPage">
+
+    <!--<Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        
+        --><!-- Place new controls here --><!--
+        <Label Grid.Row="0" Grid.Column="0" 
+               Text="this is r 0 c 0" TextColor="Red" />
+
+        <Entry Grid.Row="1" Grid.Column="0"  Text="this is r1 c0"></Entry>
+
+        <Label Grid.Row="0" Grid.Column="1" Text="this is r0 c1"></Label>
+        
+        <Label Grid.Row="1" Grid.Column="1"               
+               Text="this r1 cl" FontSize="Default" 
+               TextColor="BlueViolet"></Label>
+
+
+        <Picker Grid.Row="2" Grid.Column="0"  x:Name="picker" Title="this is r2 c0">
+        </Picker>
+
+        <Button Grid.Row="2" Grid.Column="1"  Text="r2 c1" Clicked="Button_Clicked"></Button>
+        
+    </Grid>-->
+    
+    <StackLayout Padding="12" 
+                 Orientation="Horizontal" Spacing="6" VerticalOptions="Start">
+        
+        <Label Text="the switch" VerticalOptions="Center" HorizontalOptions="Start"></Label>
+        <Switch x:Name="switch" VerticalOptions="Center" HorizontalOptions="End" ></Switch>   
+        
+        
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="People List"
+             x:Class="AppToturial.View.PeopleListView">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Default" Priority="0" Text="Save" Command="{Binding cmdSave}"></ToolbarItem>
+        <ToolbarItem Order="Secondary" Priority="0" Text="Cancel me" Command="{Binding cmdCancel}"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <Grid Padding="12">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Text="Please press back to return"></Label>
+
+        <SearchBar Grid.Row="1" x:Name="searchBar" ></SearchBar>
+
+        <ListView Grid.Row="2"
+                  HasUnevenRows="True"
+                  CachingStrategy="RecycleElement"
+                  SelectedItem="{Binding selectedItem, Mode=TwoWay}"
+                  ItemsSource="{Binding obcList}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding textDisplay}" 
+                              Detail="{Binding detailsDisplay}"                              
+                              TextColor="Black"
+                              DetailColor="Green">
+                    </TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </Grid>
+    
+    
+</ContentPage>
